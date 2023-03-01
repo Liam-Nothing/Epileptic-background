@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+</head>
+
+<body>
+    <script>
+        colors_list = [
+            "red",
+            "deeppink",
+            "orangered",
+            "yellow",
+            "magenta",
+            "darkviolet",
+            "lime",
+            "cyan",
+            "deepskyblue",
+            "blue",
+        ]
+
+        setInterval(
+            function () {
+                document.body.style.backgroundColor = colors_list[getRandomInt(colors_list.length)];
+            }
+        , 10);
+
+        function getRandomInt(max) {
+            console.log("ok");
+            return Math.floor(Math.random() * max);
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+</body>
+
+</html>
